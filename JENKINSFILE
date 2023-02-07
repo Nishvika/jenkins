@@ -19,12 +19,23 @@ pipeline {
          steps {
                 git branch: "$params.Branch", url: 'https://github.com/Nishvika/jenkins.git'
                 echo 'Hello sravani'
-                echo "The entered number is $params.value"
-                echo "The FIRST envir is ${env.VALUE_ONE}"
-                echo "The entered number is $params.value"
-                echo "The SECOND envir is ${env.VALUE_TWO}"
-                echo "The entered number is $params.value"
-                echo "The THREE envir is ${env.VALUE_THREE}"
+                sh '''case value in
+                      1)
+                      echo "The entered number is $params.value"
+                      echo "The FIRST envir is ${env.VALUE_ONE}"
+                      ;;
+                      2)
+                      echo "The entered number is $params.value"
+                      echo "The SECOND envir is ${env.VALUE_TWO}"
+                      ;;
+                      3)
+                      echo "The entered number is $params.value"
+                      echo "The THREE envir is ${env.VALUE_THREE}"
+                      ;;
+                      *)
+                      echo "Enter the correct number"
+                      ;;
+                esac'''
                 }
          }
       }
