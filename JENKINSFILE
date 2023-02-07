@@ -21,11 +21,10 @@ pipeline {
                 echo 'Hello sravani'
                 echo "The entered number is $params.value"
                 environment name:'VALUE_ONE', value: '1'
-                else {
+                } else {
                    echo "The entered number is $params.value"
                    environment name:'VALUE_TWO', value: '2'
-                }
-                if else {
+                  if  {
                    echo "The entered number is $params.value"
                    environment name:'VALUE_THREE', value: '3'
                 }
