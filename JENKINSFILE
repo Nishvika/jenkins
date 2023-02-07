@@ -6,7 +6,7 @@ pipeline {
       VALUE_THREE = '3'
    }
    parameters {
-               choice choices: ['1', '2', '3'], description: 'Enter the number', name: 'value'
+               choice choices: ['1', '2', '3',], description: 'Enter the number', name: 'value'
                choice choices: ['main', 'sravani', 'kiran', 'nishvika'], description: 'Enter the branch name', name: 'Branch'
    }
    stages {
@@ -21,12 +21,10 @@ pipeline {
                 echo 'Hello sravani'
                 echo "The entered number is $params.value"
                 environment name:'VALUE_ONE', value: '1'
-                } else {
-                   echo "The entered number is $params.value"
-                   environment name:'VALUE_TWO', value: '2'
-                  if  {
-                   echo "The entered number is $params.value"
-                   environment name:'VALUE_THREE', value: '3'
+                echo "The entered number is $params.value"
+                environment name:'VALUE_TWO', value: '2'
+                echo "The entered number is $params.value"
+                environment name:'VALUE_THREE', value: '3'
                 }
          }
       }
