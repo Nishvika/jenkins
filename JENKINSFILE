@@ -14,10 +14,10 @@ pipeline {
       // skip a stage while creating the pipeline
       stage("A stage to be skipped") {
          when {
-            expression { 1 }  //skip this stage
+            expression { $params.value }  //skip this stage
          }
          steps {
-            echo 'enter value is true $params.value'
+            echo 'enter value is true'
          }
       }
     }  
