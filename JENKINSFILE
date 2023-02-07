@@ -14,10 +14,13 @@ pipeline {
       // skip a stage while creating the pipeline
       stage("A stage to be skipped") {
          when {
-            expression { $params.value }  //skip this stage
+            expression {  }  //skip this stage
          }
          steps {
-            echo 'enter value is true'
+                git branch: "$params.Branch", url: ''
+                echo 'Hello sravani'
+                echo "The entered day is $params.value"
+                echo "The environment variable value for VALUE_ONE is $VALUE_ONE $VALUE_TWO $VALUE_THREE "
          }
       }
     }  
