@@ -17,7 +17,7 @@ pipeline {
             expression {  }  //skip this stage
          }
          steps {
-                git branch: "$params.Branch", url: ''
+                git branch: "$params.Branch", url: 'https://github.com/Nishvika/jenkins.git'
                 echo 'Hello sravani'
                 echo "The entered day is $params.value"
                 echo "The environment variable value for VALUE_ONE is $VALUE_ONE $VALUE_TWO $VALUE_THREE "
