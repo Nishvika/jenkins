@@ -20,15 +20,15 @@ pipeline {
                 git branch: "$params.Branch", url: 'https://github.com/Nishvika/jenkins.git'
                 echo 'Hello sravani'
                 sh '''case value in
-                      1)
+                      "1")
                       echo "The entered number is $params.value"
                       echo "The FIRST envir is ${env.VALUE_ONE}"
                       ;;
-                      2)
+                      "2")
                       echo "The entered number is $params.value"
                       echo "The SECOND envir is ${env.VALUE_TWO}"
                       ;;
-                      3)
+                      "3")
                       echo "The entered number is $params.value"
                       echo "The THREE envir is ${env.VALUE_THREE}"
                       ;;
