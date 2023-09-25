@@ -6,7 +6,7 @@ pipeline {
       VALUE_THREE = '3'
    }
    parameters {
-               choice choices: ['1', '2', '3',], description: 'Enter the number', name: 'value'
+               choice choices: ['1', '2', '3', '4' ], description: 'Enter the number', name: 'value'
                choice choices: ['main', 'sravani', 'kiran', 'nishvika'], description: 'Enter the branch name', name: 'Branch'
    }
    stages {
